@@ -1,0 +1,129 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map,
+#mymap {
+/*height: 100%;*/
+/*max-height: 500px*/
+  height: 300px;
+}
+@media screen and (min-width: 480px) {
+  #mymap {
+    height: 600px;
+    max-width: 1200px;
+  }
+}
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 1vw;
+  padding: 0;
+  max-width: 960px;
+  margin: auto;
+  font-size: 120%;
+}
+#map_wrap {
+  position: relative;
+}
+#search {
+  z-index: 10;
+  min-width: 25%;
+  max-width: 960px;
+  margin: 10px 0 15px;
+}
+#search label span {
+  display: block;
+  font-weight: bold;
+/* font-size: 20px; */
+}
+#search label {
+  display: inline-block;
+  width: calc(100% - 85px);
+}
+#instructions {
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+#search-input {
+  font-size: 20px;
+  width: 100%;
+}
+#subm_search {
+  font-size: 20px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+#my_map_wrap {
+  position: relative;
+}
+#my_map_wrap.hide {
+  position: absolute;
+  left: -9000px;
+}
+#toggle_table_label {
+  font-size: 16px;
+}
+table {
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px #000 solid;
+}
+tbody tr:nth-child(odd) {
+  background-color: #e1e1e1;
+}
+thead th,
+tbody td {
+  padding: 5px 10px;
+  text-align: right;
+}
+table td:nth-child(1),
+table th:nth-child(1) {
+  text-align: left;
+}
+caption {
+  font-size: 120%;
+}
+footer {
+  margin-top: 2em;
+}
+#pano {
+  height: 350px;
+}
+.phoneytext {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 620px) {
+  #search label {
+    min-width: 500px;
+  }
+  #search label span {
+    display: inline;
+  }
+  #search-input {
+    width: calc(100% - 70px);
+  }
+  #subm_search {
+    margin-top: 0;
+  }
+  #mymap.with_pano,
+  #pano:not([hidden]) {
+    width: 49%;
+  }
+  #pano:not([hidden]) {
+    height: 600px;
+    left: 49%;
+    position: absolute !important;
+    top: 0;
+  }
+}

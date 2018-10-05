@@ -1,0 +1,56 @@
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finding Accessible Pedestrian Signals in NYC | Equal Entry</title>
+<link rel="stylesheet" href="css/main.css?0">
+<link rel="stylesheet" href="http://demo.equalentry.com/ee-style-guide/css/style_guide.css?1">
+</head>
+<body>
+<main>
+<h1>Finding Accessible Pedestrian Signals in NYC</h1>
+<div id="instructions">Do you want to find out if there are any accessible pedestrian signals near a specific location in New York City? Type your search into the address field. Nearby intersections with signals will be displayed on a map and in a data table.</div>
+
+<div id="map_wrap">
+    <div id="search">
+        <label><span>Address:</span> <input id="search-input" placeholder="" aria-label="Search for a place on map" type="search"></label>
+        <button id="subm_search">Search</button>
+</div>
+        <div><label id="toggle_table_label"><input type="checkbox" id="toggle_table_view">View Table of Results</label></div>
+
+    <div id="my_map_wrap">
+        <div id="mymap"></div>
+        <div id="pano" hidden></div>
+    </div>
+
+    <div id="table_view" hidden>
+        <table border="0" cellpadding="0" cellspacing="0">
+          <caption><strong>Nearest Signal Locations</strong></caption>
+            <thead>
+                <tr>
+                    <!--<th>#</th>-->
+                    <th>Intersection</th>
+                    <th id="table_view_distance_col" hidden>Distance, miles</th>
+                    <th>Date created</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="autocomplete-status" role="status" aria-live="assertive" class="sr-only"></div>
+</div>
+<div id="floating-panel">
+    <input type="button" value="Toggle Street View" onclick="toggleStreetView();">
+</div>
+</main>
+<footer>
+    Developed by <a href="https://equalentry.com/">Equal Entry</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL1Fyyvsv8UHSTkHAJW7072uYrsh0YWp8&libraries=places"></script>
+<script src="js/infobubble.js"></script>
+<script src="js/markerclusterer.js?2"></script>
+<script src="js/script.js?4"></script>
+</body>
+</html>
