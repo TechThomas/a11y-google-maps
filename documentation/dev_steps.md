@@ -1,3 +1,9 @@
+## Overview
+
+This project's aim is to make an accessible map with clusters/markers. An overview of [Accessible Maps on the Web](https://equalentry.com/accessible-maps-on-the-web/) details why we desired to build this accessibility sample.
+
+The implementation of this code is hosted at [Finding Accessible Pedestrian Signals in NYC](https://techthomas.github.io/a11y-google-maps/).
+
 Current project is based on Google's [Marker Clustering](https://developers.google.com/maps/documentation/javascript/marker-clustering) example using use the [MarkerClusterer](https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer) library in combination with the Google Maps JavaScript API.
 
 By default the library has some significant accessibility issues:
@@ -6,7 +12,7 @@ By default the library has some significant accessibility issues:
 
  These issues are acknowledged in the [Google Maps - Section 508 Compliance VPAT](https://developers.google.com/maps/premium/accessibility) from Google from 2013.
 
-This project's aim is to make an accessible map with clusters/markers. An overview of [Accessible Maps on the Web](https://equalentry.com/accessible-maps-on-the-web/) details why we desired to build this accessibility sample.
+
 
 ## Start
 
@@ -44,9 +50,9 @@ Add the same new code to `	ClusterIcon.prototype.show`.
 
 ## Tooltips for Markers
 
-We are goin to use [InfoBubble](https://github.com/googlemaps/js-info-bubble) library to add marker tooltip on focus.
+We are going to use [InfoBubble](https://github.com/googlemaps/js-info-bubble) library to add support for the marker tooltip to display on keyboard focus.
 
-Add `focus` and `blur` event listeners for cluster to show/hide tooltip when focused on single marker:
+We add `focus` and `blur` event listeners for cluster to show/hide tooltip when focused on single marker:
 
 ```
     ClusterIcon.prototype.onAdd = function() {
@@ -106,9 +112,9 @@ Add small delay (1 second) to wait until markers are actually loaded on map:
       // update table's HTML
       ...
     }
-    ```
+```
 
- ## Search by Address
+## Search by Address
 
 Add `<input id="search-input" type="search">`.
 
