@@ -509,7 +509,7 @@ myMap.addListener('zoom_changed', timeoutTableUpdate);
 
 var panorama = new google.maps.StreetViewPanorama(
 	document.getElementById('pano'), {
-		position: myMap.getCenter(),
+		// position: myMap.getCenter(),
 		pov: {
 			heading: 256,
 			pitch: 0
@@ -523,6 +523,38 @@ var panorama = new google.maps.StreetViewPanorama(
 		enableCloseButton: false
 	}
 );
+updatePanorama(myMap.getCenter());
+
+function updatePanorama(pos)
+{
+	if (!pos)
+	{
+		console.error('Cannot update panorama to undefined position');
+		return;
+	}
+	if (typeof panorama === 'undefined' || !panorama)
+	{
+		console.error('Cannot update undefined panorama');
+		return;
+	}
+
+	var sv = new google.maps.StreetViewService();
+	sv.getPanorama({location: pos, radius: 50, source: google.maps.StreetViewSource.OUTDOOR}, function(data, status){
+		if (status === 'OK')
+		{
+			panorama.setPano(data.location.pano);
+			console.log('panorama updated');
+		}
+		else
+		{
+			console.error('Street View data not found for this location.');
+		}
+	});
+}
+
+
+
+
 // hiden by default
 panorama.setVisible(false);
 

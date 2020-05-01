@@ -1186,7 +1186,8 @@ ClusterIcon.prototype.triggerClusterFocus = function() {
       lat: this.cluster_.markers_[0].getPosition().lat(),
       lng: this.cluster_.markers_[0].getPosition().lng()
     };
-    panorama.setPosition(markerPos);
+
+    updatePanorama(markerPos);
   }
 
   // do nothing is more than 1 item
