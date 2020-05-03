@@ -90,7 +90,7 @@ var myMarkers = [
 	[40.8069536, -73.9453494, "5th Avenue with East 124th and West 124th Streets - 8/19/16"],
 	[40.7441027, -73.9956435, "7th Avenue and West 23rd Street - 9/16/11"],
 	[40.7497096, -73.991556, "7th Avenue and West 32nd Street - 7/5/12"],
-	[40.7592009, -73.9846144, "7th Avenue and West 47th Street - 2/24/17"],
+	[40.7592207, -73.9846144, "7th Avenue and West 47th Street - 2/24/17"], // original coords 40.7592009, -73.9846144. updated to match better google maps panorama result
 	[40.8133468, -73.9488576, "8th Avenue and West 130th Street - 11/18/16"],
 	[40.765418, -73.983822, "8th Avenue and West 55th Street - 3/1/13"],
 	[40.7739746, -73.9310472, "9th Avenue and West 27th Street - 1/26/17"],
